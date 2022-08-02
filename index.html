@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript no renshuu</title>
+  <meta charset="utf-8" />
+  <title>Conditionals: Task 3</title>
+  <style>
+    p {
+      color: purple;
+      margin: 0.5em 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+  <link rel="stylesheet" href="../styles.css" />
 </head>
+
 <body>
-    <script src="./javascript.js"></script>
+
+  <section class="preview">
+
+
+
+  </section>
+
 </body>
+<script>
+
+  let response;
+  let score = "45";
+  let machineActive = false;
+
+
+  let error = score > 100 && score < 0
+  let fail = score >= 0 && score <= 19
+  let barely = score >= 20 && score <= 39
+  let nice = score >= 40 && score <= 69
+  let awesome = score >= 70 && score <= 89
+  let howTheHell = score >= 90 && score <= 100
+
+  switch (machineActive) {
+    case true:
+    case false:
+      machineActive = true
+      switch (machineActive) {
+        case score = error:
+          response = "This is not possible, an error has occured."
+          break;
+        case score = fail:
+          response = "That was a terrible score - total fail!"
+          break;
+        case score = barely:
+          response = "You know some things, but it's a pretty bad score. You need to make some improvement."
+          break;
+        case score = nice:
+          response = "You somewhat passed. This is fine, I guess."
+          break;
+        case score = awesome:
+          response = "Sheesh! You really did a good job!"
+          break;
+        case score = howTheHell:
+          response = "What the fuck did you do to succeed? Holy hell mate."
+          break;
+      }
+ 
+  }
+
+  const section = document.querySelector('section');
+
+  let para1 = document.createElement('p');
+  let para2 = document.createElement('p');
+
+  para1.textContent = `Your score is ${score}`;
+  para2.textContent = response;
+
+  section.appendChild(para1);
+  section.appendChild(para2);
+</script>
+
 </html>
